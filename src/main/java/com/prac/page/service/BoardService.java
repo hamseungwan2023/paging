@@ -24,11 +24,6 @@ public class BoardService {
         return boardRepository.findAllByOrderByModifiedAtDesc(pageable);
     }
 
-//    public Page<Board> descBoards(int page, int size) {
-//        Pageable pageable = PageRequest.of(page, size);
-//        return boardRepository.findAllByOrderByUpdatedAtDesc(pageable);
-//    }
-
     public BoardResDto createBoard(BoardReqDto reqDto) {
         Board board = Board.builder()
                 .title(reqDto.getTitle())
